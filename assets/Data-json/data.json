@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "name": "Ecommerce Site",
+    "images" : [],
+    "Description": "This is a full-featured e-commerce web application built using Node.js for the backend and Angular for the frontend, designed to support multi-vendor functionality. The platform allows multiple vendors to register, manage their brands, and list products under their respective categories. Admins can oversee vendor registrations, brand approvals, and product listings. Customers can browse products, add items to their cart, and place orders seamlessly. The frontend UI is crafted using Angular Material for a responsive and user-friendly experience, while MongoDB serves as the primary NoSQL database to handle dynamic data structures like product listings, user data, and vendor profiles.",
+    "techStack": {
+      "frontEnd": ["Angular", "Angular Material (Material UI)"],
+      "backEnd": ["Node.js", "Express.js", "JWT (JSON Web Token)", "4RESTful APIs"],
+      "Database": ["MongoDB", "Redis"],
+      "additionalTools": ["Git","Filezilla"]
+    },
+    "Project_Workflow": {
+      "points": [
+        {
+          "User Entry & Access Flow": [
+            "The user accesses the Angular frontend.",
+            "Auth-based routes determine the dashboard view (Admin, Vendor, Customer).",
+            "Role-specific dashboards and navigation options are rendered using Angular components and Material UI."
+          ]
+        },
+        {
+          "Vendor Registration & Management": [
+            "Vendors register through a form and are stored in MongoDB in pending status.",
+            "Admin reviews and approves vendors.",
+            "Approved vendors can log in and create brands (e.g., Nike, Apple)."
+          ]
+        },
+        {
+          "Brand & Product Management": [
+            "Vendors create brands under their profile.",
+            "Products are created under a brand with details like title, description, price, category, stock, and images.",
+            "Products are stored in the MongoDB database and displayed dynamically to customers.",
+            "Admin can moderate product listings."
+          ]
+        },
+        {
+          "Customer Shopping Experience": [
+            "Customers can filter products by category, brand, or vendor.",
+            "The product listing and detail pages use Angular components styled with Material UI.",
+            "Customers can add products to a cart (local/session storage or backend cart).",
+            "Checkout process creates an order (optionally integrates payment gateway).",
+            "Orders are saved to MongoDB with status (Pending, Confirmed, Shipped, Delivered)."
+          ]
+        },
+        {
+          "Order Flow & Dashboard": [
+            "Vendors can view orders placed for their products.",
+            "Admin can track global orders and system activity.",
+            "Dashboards display counts, recent activity, and stats using Angular material cards and charts."
+          ]
+        },
+        {
+          "File & Media Handling": [
+            "Product images and brand logos are uploaded via Multer and stored either locally or on services like AWS S3.",
+            "Images are retrieved dynamically when products/brands are listed."
+          ]
+        },
+        {
+          "Security & Optimization": [
+            "All APIs are protected by JWT.",
+            "CORS, Helmet, and secure headers are enabled.",
+            "MongoDB indexes are applied for fast querying.",
+            "Angular lazy loading used to improve app performance."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Casio Management Panel – Admin & BO Control System",
+    "Description": "This is a frontend-only admin panel for managing a casino-style gaming platform. It features a structured UI for two roles: Main Admin and Back Office (BO) Admin. The frontend was developed using Angular and Angular Material, offering responsive design, role-based routing, and dynamic dashboards. It includes user and permission management interfaces, game configuration panels, and analytical dashboards that simulate real-time tracking and status displays.",
+    "techStack": {
+      "frontEnd": [
+        "Angular",
+        "Angular Material",
+        "Angular Routing",
+        "Prime-NG",
+        "Role-based Route Guards",
+        "Dynamic Dashboards with Charts",
+        "Graphs"
+      ],
+      "backEnd": [
+        "Not Implemented – Frontend Only"
+      ],
+      "Database": [
+        "Not Implemented – Frontend Only"
+      ],
+      "additionalTools": [
+        "Git","Filezilla"
+      ]
+    },
+    "Project_Workflow": {
+      "points": [
+        {
+          "Main Admin Panel UI": [
+            "Create and manage games through structured forms and tables.",
+            "Configure game details (placeholders for integration).",
+            "Simulated monitoring of game activity (chart & list components)."
+          ]
+        },
+        {
+          "User & BO Admin Interfaces": [
+            "UI forms for creating BO accounts and assigning roles.",
+            "Table views for user and permission management.",
+            "Toggle switches and menus for access control simulation."
+          ]
+        },
+        {
+          "Payment & Balance Screens": [
+            "Mockup interfaces for payment logs and balance distribution.",
+            "Stat cards and tables to simulate transactions.",
+            "Frontend-ready components for future backend hookup."
+          ]
+        },
+        {
+          "Game Analytics & Monitoring": [
+            "Charts and lists to visualize player activity.",
+            "Structured layout to display win/loss sessions and history.",
+            "Filter and search features on dashboard tables."
+          ]
+        },
+        {
+          "Security & Routing": [
+            "Route Guards based on user roles (Main Admin, BO).",
+            "Token-based auth simulation (frontend stub).",
+            "Restricted component loading through Angular guards."
+          ]
+        },
+        {
+          "Responsiveness & Design": [
+            "Fully responsive design using Angular Material.",
+            "Dark/light theme support (optional).",
+            "Optimized layout for both desktop and tablet views."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "Word Puzzle Management System – Admin Control Panel",
+    "Description": "A category-based word puzzle game admin panel built for full control over game content and analytics. The system provides a seamless interface to manage word banks, player activity, game outcomes, and rewards through secure, role-based access. It includes dynamic dashboards and charts for real-time game insights.",
+    "techStack": {
+      "frontEnd": [
+        "Angular",
+        "Angular Material",
+        "Chart.js / ngx-charts",
+        "Role-based Route Guards",
+        "Responsive Dashboards"
+      ],
+      "backEnd": [
+        "Node.js",
+        "Express.js",
+        "JWT Authentication",
+        "RESTful APIs"
+      ],
+      "Database": [
+        "MongoDB",
+        "Mongoose"
+      ]
+    },
+    "Project_Workflow": {
+      "points": [
+        {
+          "Word & Category Management": [
+            "Admins can create, update, and delete categories and words.",
+            "Words are grouped under categories for structured gameplay.",
+            "Category-specific word banks are used during game sessions."
+          ]
+        },
+        {
+          "Game Session & Transaction Logging": [
+            "Each game session logs details like player, category, time, and outcome.",
+            "Admin can view entry fees, guessed words, win/loss status.",
+            "Game records support filtering and detailed viewing."
+          ]
+        },
+        {
+          "Winner & Reward Management": [
+            "Winning players are listed with verification tools.",
+            "Rewards can be approved or triggered manually.",
+            "History is available with filters by category or player."
+          ]
+        },
+        {
+          "Analytics & Graphical Visualization": [
+            "Dynamic charts display game stats: games per category, win/loss ratio, top players.",
+            "Visual insights on user engagement and revenue.",
+            "Dashboard updates in real-time or by date range."
+          ]
+        },
+        {
+          "Access Control & Security": [
+            "Secure login using JWT tokens.",
+            "Role-based access enforced via Angular guards and backend validation.",
+            "Sensitive data like passwords is encrypted using bcrypt."
+          ]
+        },
+        {
+          "Additional Functionalities": [
+            "Swagger or Postman used for API testing/documentation.",
+            "Multer or cloud/local storage options for asset uploads.",
+            "Helmet and CORS enabled for API protection."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Word Puzzle Management System – Admin Control Panel",
+    "Description": "A category-based word puzzle game admin panel built for full control over game content and analytics. The system provides a seamless interface to manage word banks, player activity, game outcomes, and rewards through secure, role-based access. It includes dynamic dashboards and charts for real-time game insights.",
+    "techStack": {
+      "frontEnd": [
+        "Angular",
+        "Angular Material",
+        "Chart.js / ngx-charts",
+        "Role-based Route Guards",
+        "Responsive Dashboards"
+      ],
+      "backEnd": [
+        "Node.js",
+        "Express.js",
+        "JWT Authentication",
+        "RESTful APIs"
+      ],
+      "Database": [
+        "MongoDB",
+        "Mongoose"
+      ]
+    },
+    "Project_Workflow": {
+      "points": [
+        {
+          "Word & Category Management": [
+            "Admins can create, update, and delete categories and words.",
+            "Words are grouped under categories for structured gameplay.",
+            "Category-specific word banks are used during game sessions."
+          ]
+        },
+        {
+          "Game Session & Transaction Logging": [
+            "Each game session logs details like player, category, time, and outcome.",
+            "Admin can view entry fees, guessed words, win/loss status.",
+            "Game records support filtering and detailed viewing."
+          ]
+        },
+        {
+          "Winner & Reward Management": [
+            "Winning players are listed with verification tools.",
+            "Rewards can be approved or triggered manually.",
+            "History is available with filters by category or player."
+          ]
+        },
+        {
+          "Analytics & Graphical Visualization": [
+            "Dynamic charts display game stats: games per category, win/loss ratio, top players.",
+            "Visual insights on user engagement and revenue.",
+            "Dashboard updates in real-time or by date range."
+          ]
+        },
+        {
+          "Access Control & Security": [
+            "Secure login using JWT tokens.",
+            "Role-based access enforced via Angular guards and backend validation.",
+            "Sensitive data like passwords is encrypted using bcrypt."
+          ]
+        },
+        {
+          "Additional Functionalities": [
+            "Swagger or Postman used for API testing/documentation.",
+            "Multer or cloud/local storage options for asset uploads.",
+            "Helmet and CORS enabled for API protection."
+          ]
+        }
+      ]
+    }
+  }
+
+]
