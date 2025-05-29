@@ -70,6 +70,7 @@
   {
     "id": 2,
     "name": "Casio Management Panel – Admin & BO Control System",
+    "images": ["../images/ProjectImage/Poker-Admin.png","../images/ProjectImage/Poker-Admin_2.png","../images/ProjectImage/Poker_admin_3.png"],
     "Description": "This is a frontend-only admin panel for managing a casino-style gaming platform. It features a structured UI for two roles: Main Admin and Back Office (BO) Admin. The frontend was developed using Angular and Angular Material, offering responsive design, role-based routing, and dynamic dashboards. It includes user and permission management interfaces, game configuration panels, and analytical dashboards that simulate real-time tracking and status displays.",
     "techStack": {
       "frontEnd": [
@@ -140,7 +141,7 @@
   },
   {
     "id": 3,
-    "name": "Word Puzzle Management System – Admin Control Panel",
+    "name": "MicroService Game Integration Panel.",
     "Description": "A category-based word puzzle game admin panel built for full control over game content and analytics. The system provides a seamless interface to manage word banks, player activity, game outcomes, and rewards through secure, role-based access. It includes dynamic dashboards and charts for real-time game insights.",
     "techStack": {
       "frontEnd": [
@@ -211,6 +212,7 @@
   {
     "id": 4,
     "name": "Word Puzzle Management System – Admin Control Panel",
+    "images": ["../images/ProjectImage/Poker-Admin.png","../images/ProjectImage/Poker-Admin_2.png","../images/ProjectImage/Poker_admin_3.png"],
     "Description": "A category-based word puzzle game admin panel built for full control over game content and analytics. The system provides a seamless interface to manage word banks, player activity, game outcomes, and rewards through secure, role-based access. It includes dynamic dashboards and charts for real-time game insights.",
     "techStack": {
       "frontEnd": [
@@ -277,5 +279,65 @@
         }
       ]
     }
+  },
+  {
+    "id": 5,
+    "name": "Brain Game Playing Panel",
+    "images": ["../images/ProjectImage/EMazeAdminArea.png","../images/ProjectImage/EMazeWeb.png","../images/ProjectImage/EMazeWeb_2.png"],
+    "Description": "This project is a centralized game integration panel designed to host third-party games through a modular and scalable architecture. Third-party games are embedded into the panel by following specific integration guidelines, where required APIs are triggered from our system to initiate and manage gameplay. A key feature of the platform is its virtual currency system—before the game starts, game currency is sent to the third-party game based on the user’s balance. As the game progresses, the currency is dynamically increased or decreased based on the win/loss outcome, and these changes are reported back to our system.\n\nTo maintain reliability and scalability, all communication between services—including request and response handling—is managed through a message queue system. Game providers are connected through dedicated microservices, while a central main service orchestrates all modules, ensuring seamless integration, real-time updates, and secure transaction flow across the platform.",
+    "techStack": {
+      "frontEnd": [
+        "Angular 14",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "backEnd": [
+        "Not Developed By Me."
+      ],
+      "Database": [
+        null
+      ]
+    },
+    "Project_Workflow": {
+      "points": [
+        {
+          "Game & Audio Integration": [
+            "HTML5 games are embedded within the Angular 14 panel.",
+            "Binaural beats play in the background based on user-selected settings.",
+            "Game settings are configured via the Angular UI and sent to the game area."
+          ]
+        },
+        {
+          "Video Playback Management": [
+            "Looped background videos enhance the visual experience during gameplay.",
+            "Video settings like volume and playback speed can be customized.",
+            "Video runs in sync with the game session for immersive experience."
+          ]
+        },
+        {
+          "Game Settings & Communication": [
+            "Users configure game preferences (e.g., beat frequency) before starting.",
+            "Angular frontend sends these settings to the game iframe dynamically.",
+            "Real-time updates ensure the game adapts instantly to new settings."
+          ]
+        },
+        {
+          "Game Result Handling": [
+            "Game outcomes (e.g., score, success/failure) are sent back to the Angular panel.",
+            "Frontend captures and processes result events for display or analytics.",
+            "Results can be used to update leaderboards or session history."
+          ]
+        },
+        {
+          "Frontend Event Handling & Sync": [
+            "All gameplay-related events are monitored and handled in real-time.",
+            "Game, audio, and video components work in sync for smooth UX.",
+            "Angular listens to game completion events to trigger next actions."
+          ]
+        }
+      ]
+    }
   }
+
 ]
